@@ -9,11 +9,13 @@ export default function AddCommentForm({ articleName, setArticleInfo }) {
       method: "post",
       body: JSON.stringify({ username, text: commentText }),
       headers: {
-        "Content-Type": "application/son",
+        "Content-Type": "application/json",
       },
     });
     const body = await result.json();
     setArticleInfo(body);
+    setUsername("");
+    setCommentText("");
   };
 
   return (

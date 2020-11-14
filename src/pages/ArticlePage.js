@@ -27,7 +27,6 @@ const ArticlePage = ({ match }) => {
   const otherArticles = articleContent.filter(
     (article) => article.name !== name
   );
-  console.log(articleInfo);
   return (
     <>
       <h1>{article.title}</h1>
